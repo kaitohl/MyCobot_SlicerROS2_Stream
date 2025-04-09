@@ -64,3 +64,28 @@ $ cd ~/ros2_mycobot/install/mycobot_description/share/mycobot_description/urdf/m
 ```
 
 This folder is where the MyCobot 280 m5's URDF is located along with the .dae files that define 3D models of each joint.
+
+**Step 8:** Replace the `mycobot_280_m5` folder with the one provided in this repository. The new folder contains .stl files of all the joints and an updated URDF file.
+
+## Running
+
+**Step 1:** Open a new terminal and source the workspace. Note: Every new terminal you open, ensure to source the workspace
+
+```bash
+$ cd ~/ros2_mycobot
+$ source install/setup.bash
+```
+
+**Step 2:** Run the following command:
+
+```bash
+$ ros2 run mycobot_280 listen_real.py
+```
+
+**Step 3:** Open another terminal and run the following command:
+
+```bash
+$ ros2 launch mycobot_280 slider_control.launch.py
+```
+
+**Step4:** Open another terminal and run SlicerROS2. Using the default paramters in the module should work.

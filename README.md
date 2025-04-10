@@ -69,23 +69,29 @@ This folder is where the MyCobot 280 m5's URDF is located along with the .dae fi
 
 ## Running
 
-**Step 1:** Open a new terminal and source the workspace. Note: Every new terminal you open, ensure to source the workspace
+**Step 1:** Ensure the robot is connected to your device and in transponder mode. Run the following command to enable permissions for the connect port:
+
+```bash
+$ sudo chmod 777 /dev/ttyACM0
+```
+
+**Step 2:** Source the workspace. Note: Every new terminal you open, ensure to source the workspace
 
 ```bash
 $ cd ~/ros2_mycobot
 $ source install/setup.bash
 ```
 
-**Step 2:** Run the following command:
+**Step 3:** Run the following command:
 
 ```bash
-$ ros2 run mycobot_280 listen_real.py
+$ ros2 run mycobot_280 listen_real
 ```
 
-**Step 3:** Open another terminal and run the following command:
+**Step 4:** Open another terminal and run the following command:
 
 ```bash
 $ ros2 launch mycobot_280 slider_control.launch.py
 ```
 
-**Step4:** Open another terminal and run SlicerROS2. Using the default paramters in the module should work.
+**Step 5:** Open another terminal and run SlicerROS2. Using the default paramters in the module should work.
